@@ -1,0 +1,78 @@
+erDiagram
+    USERS ||--o| USER_PREFERENCE_VECTORS : "tiene perfil de gustos"
+    USERS ||--o{ USER_INTERACTIONS_LOG : "genera eventos"
+    USERS ||--o{ USER_FAVORITES : "guarda"
+    CATEGORIES ||--o{ CATEGORIES : "es padre de"
+    CATEGORIES ||--o{ PLACES : "clasifica"
+    PLACES ||--o{ PLACE_TAGS : "se describe con"
+    TAGS ||--o{ PLACE_TAGS : "etiqueta a"
+    PLACES ||--o{ USER_INTERACTIONS_LOG : "recibe interacciones"
+    PLACES ||--o{ USER_FAVORITES : "es guardado en"
+
+    USERS {
+        uuid id PK
+        text display_name
+        smallint default_budget_level
+        companion_type default_companion
+        integer search_radius_m
+        boolean telemetry_consent
+        timestamptz onboarding_completed_at
+    }
+    CATEGORIES {
+        smallint id PK
+        smallint parent_id FK
+        text slug UK
+        text name
+        text icon_key
+        char color_hex
+    }
+    TAGS {
+        smallint id PK
+        text slug UK
+        text display_name
+        tag_group group_name
+        smallint vector_index UK
+    }
+    PLACES {
+        uuid id PK
+        smallint category_id FK
+        text name
+        double latitude
+        double longitude
+        smallint price_level
+        boolean is_outdoor
+        jsonb tag_weights
+        vector48 embedding
+        boolean is_active
+    }
+    PLACE_TAGS {
+        uuid place_id PK
+        smallint tag_id PK
+        numeric weight
+    }
+    USER_PREFERENCE_VECTORS {
+        uuid user_id PK
+        vector48 explicit_vector
+        vector48 current_vector
+        jsonb tag_weights
+        integer interaction_count
+        integer version
+    }
+    USER_INTERACTIONS_LOG {
+        bigint id PK
+        uuid event_id UK
+        uuid user_id FK
+        uuid place_id FK
+        uuid session_id
+        capture_channel channel
+        interaction_type interaction_type
+        integer dwell_ms
+        real signal_weight
+        jsonb context_snapshot
+        timestamptz occurred_at
+    }
+    USER_FAVORITES {
+        uuid user_id PK
+        uuid place_id PK
+        timestamptz created_at
+    }

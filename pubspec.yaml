@@ -1,0 +1,22 @@
+name: vibetrip
+description: Recomendador móvil contextual de lugares, gastronomía, actividades y entretenimiento.
+publish_to: "none"
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.4.0 <4.0.0"
+
+# Esqueleto inicial. El Entregable 2 lo reemplaza por el pubspec completo
+# (Riverpod, freezed, dio, geolocator, go_router, mapas, etc.) con la
+# justificación de cada dependencia.
+dependencies:
+  flutter:
+    sdk: flutter
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
