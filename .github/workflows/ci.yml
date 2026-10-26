@@ -1,0 +1,75 @@
+# Integración continua de VibeTrip.
+# Se ejecuta en cada push y en cada Pull Request hacia main.
+# Etapas: formato -> análisis estático -> pruebas con cobertura -> quality gate -> build APK.
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  calidad:
+    name: Formato, análisis y pruebas
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - name: Instalar dependencias
+        run: flutter pub get
+
+      - name: Verificar formato (dart format)
+        run: dart format --output=none --set-exit-if-changed lib test tool
+
+      - name: Análisis estático (RNF-11)
+        run: flutter analyze --fatal-infos --fatal-warnings
+
+      - name: Pruebas con cobertura
+        run: flutter test --coverage
+
+      - name: Quality gate de cobertura ≥ 90 % en dominio (RNF-12)
+        run: dart run tool/check_coverage.dart coverage/lcov.info 90 /domain/
+
+      - name: Publicar reporte de cobertura
+        uses: actions/upload-artifact@v4
+        with:
+          name: cobertura-lcov
+          path: coverage/lcov.info
+
+  build-android:
+    name: Build APK (debug)
+    needs: calidad
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          cache: true
+
+      - run: flutter pub get
+
+      - name: Compilar APK
+        run: flutter build apk --debug
+
+      - name: Publicar APK como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: vibetrip-debug-apk
+          path: build/app/outputs/flutter-apk/app-debug.apk

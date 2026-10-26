@@ -1,0 +1,368 @@
+{
+  "version": 1,
+  "city": "Cusco, Perú",
+  "notes": "Lugares reales del centro de Cusco con coordenadas aproximadas. Pesos de etiquetas asignados por el equipo para pruebas del motor; precios como price_level 1-4.",
+  "places": [
+    {
+      "id": "a1000000-0000-4000-8000-000000000001",
+      "category_slug": "sitio_historico",
+      "name": "Qorikancha",
+      "description": "Templo inca del Sol con el convento de Santo Domingo construido encima.",
+      "address": "Av. El Sol s/n, Cusco",
+      "latitude": -13.5199,
+      "longitude": -71.9752,
+      "price_level": 2,
+      "estimated_cost": 20.0,
+      "is_outdoor": false,
+      "best_time_buckets": ["morning", "afternoon"],
+      "companion_fit": ["solo", "couple", "family"],
+      "image_urls": [],
+      "tag_weights": {
+        "historico": 1.0, "arquitectura": 1.0, "cultural": 0.9, "mistico": 0.7,
+        "fotografico": 0.7, "museo": 0.6, "tranquilo": 0.6, "solo_friendly": 0.6, "accesible": 0.5
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000002",
+      "category_slug": "museo",
+      "name": "Museo de Arte Precolombino (MAP)",
+      "description": "Colección de arte precolombino en una casona colonial frente a la plaza Nazarenas.",
+      "address": "Plaza Nazarenas 231, Cusco",
+      "latitude": -13.5153,
+      "longitude": -71.9775,
+      "price_level": 2,
+      "estimated_cost": 25.0,
+      "is_outdoor": false,
+      "best_time_buckets": ["morning", "afternoon", "evening"],
+      "companion_fit": ["solo", "couple"],
+      "image_urls": [],
+      "tag_weights": {
+        "museo": 1.0, "arte": 1.0, "cultural": 0.9, "tranquilo": 0.7,
+        "solo_friendly": 0.7, "elegante": 0.5, "para_parejas": 0.5, "historico": 0.5
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000003",
+      "category_slug": "sitio_historico",
+      "name": "Sacsayhuamán",
+      "description": "Complejo arqueológico inca con muros ciclópeos y vista a la ciudad.",
+      "address": "Parque Arqueológico de Saqsaywaman, Cusco",
+      "latitude": -13.5094,
+      "longitude": -71.9817,
+      "price_level": 3,
+      "estimated_cost": 70.0,
+      "is_outdoor": true,
+      "best_time_buckets": ["morning", "afternoon"],
+      "companion_fit": ["solo", "couple", "friends", "family"],
+      "image_urls": [],
+      "tag_weights": {
+        "historico": 1.0, "aire_libre": 1.0, "arquitectura": 0.9, "fotografico": 0.9,
+        "vista_panoramica": 0.7, "mistico": 0.6, "para_grupos": 0.6, "aventura": 0.3
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000004",
+      "category_slug": "mirador",
+      "name": "Mirador de San Cristóbal",
+      "description": "Mirador gratuito junto a la iglesia de San Cristóbal con vista de los techos del centro.",
+      "address": "Plaza San Cristóbal, Cusco",
+      "latitude": -13.5134,
+      "longitude": -71.9806,
+      "price_level": 1,
+      "estimated_cost": 0.0,
+      "is_outdoor": true,
+      "best_time_buckets": ["afternoon", "evening"],
+      "companion_fit": ["solo", "couple", "friends"],
+      "image_urls": [],
+      "tag_weights": {
+        "vista_panoramica": 1.0, "fotografico": 0.9, "economico": 0.9, "aire_libre": 0.8,
+        "romantico": 0.6, "tranquilo": 0.5, "arquitectura": 0.4, "para_parejas": 0.5
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000005",
+      "category_slug": "mirador",
+      "name": "Cristo Blanco",
+      "description": "Estatua y mirador en la colina sobre Sacsayhuamán, ideal para caminar al atardecer.",
+      "address": "Colina Pukamoqo, Cusco",
+      "latitude": -13.5097,
+      "longitude": -71.9765,
+      "price_level": 1,
+      "estimated_cost": 0.0,
+      "is_outdoor": true,
+      "best_time_buckets": ["morning", "afternoon"],
+      "companion_fit": ["solo", "couple", "friends", "family"],
+      "image_urls": [],
+      "tag_weights": {
+        "vista_panoramica": 1.0, "aire_libre": 0.9, "economico": 0.9, "fotografico": 0.8,
+        "familiar": 0.6, "tranquilo": 0.6, "naturaleza": 0.5, "deportivo": 0.3
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000006",
+      "category_slug": "sitio_historico",
+      "name": "Barrio de San Blas",
+      "description": "Barrio de artesanos con calles empinadas, talleres y galerías.",
+      "address": "Plazoleta de San Blas, Cusco",
+      "latitude": -13.5163,
+      "longitude": -71.9750,
+      "price_level": 1,
+      "estimated_cost": 0.0,
+      "is_outdoor": true,
+      "best_time_buckets": ["morning", "afternoon", "evening"],
+      "companion_fit": ["solo", "couple", "friends", "family"],
+      "image_urls": [],
+      "tag_weights": {
+        "bohemio": 1.0, "artesania": 0.9, "arte": 0.8, "arquitectura": 0.7,
+        "fotografico": 0.7, "casual": 0.6, "compras": 0.5, "economico": 0.6
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000007",
+      "category_slug": "restaurante",
+      "name": "Mercado Central de San Pedro",
+      "description": "Mercado tradicional con jugos, caldos y comida típica a precios populares.",
+      "address": "Calle Cascaparo, Cusco",
+      "latitude": -13.5225,
+      "longitude": -71.9844,
+      "price_level": 1,
+      "estimated_cost": 12.0,
+      "is_outdoor": false,
+      "best_time_buckets": ["morning", "afternoon"],
+      "companion_fit": ["solo", "friends", "family"],
+      "image_urls": [],
+      "tag_weights": {
+        "mercado": 1.0, "economico": 1.0, "comida_local": 0.9, "street_food": 0.9,
+        "tradicion_local": 0.9, "animado": 0.7, "casual": 0.7, "compras": 0.6
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000008",
+      "category_slug": "restaurante",
+      "name": "Chicha por Gastón Acurio",
+      "description": "Cocina regional cusqueña reinterpretada por un chef reconocido.",
+      "address": "Plaza Regocijo 261, Cusco",
+      "latitude": -13.5170,
+      "longitude": -71.9800,
+      "price_level": 3,
+      "estimated_cost": 90.0,
+      "is_outdoor": false,
+      "best_time_buckets": ["afternoon", "evening"],
+      "companion_fit": ["couple", "friends", "family"],
+      "image_urls": [],
+      "tag_weights": {
+        "comida_local": 1.0, "fine_dining": 0.6, "elegante": 0.6, "para_parejas": 0.6,
+        "premium": 0.5, "bebidas_artesanales": 0.4, "romantico": 0.4
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000009",
+      "category_slug": "restaurante",
+      "name": "Cicciolina",
+      "description": "Restaurante y bar de tapas mediterráneas en el segundo piso de una casona.",
+      "address": "Calle Triunfo 393, Cusco",
+      "latitude": -13.5160,
+      "longitude": -71.9767,
+      "price_level": 3,
+      "estimated_cost": 100.0,
+      "is_outdoor": false,
+      "best_time_buckets": ["evening"],
+      "companion_fit": ["couple"],
+      "image_urls": [],
+      "tag_weights": {
+        "comida_internacional": 0.9, "para_parejas": 0.9, "romantico": 0.8, "elegante": 0.7,
+        "bohemio": 0.5, "bebidas_artesanales": 0.5, "premium": 0.5
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000010",
+      "category_slug": "restaurante",
+      "name": "Pachapapa",
+      "description": "Cocina andina en un patio colonial con horno de barro, ideal para grupos.",
+      "address": "Plazoleta San Blas 120, Cusco",
+      "latitude": -13.5161,
+      "longitude": -71.9753,
+      "price_level": 2,
+      "estimated_cost": 55.0,
+      "is_outdoor": false,
+      "best_time_buckets": ["afternoon", "evening"],
+      "companion_fit": ["couple", "friends", "family"],
+      "image_urls": [],
+      "tag_weights": {
+        "comida_local": 1.0, "tradicion_local": 0.8, "familiar": 0.8, "terraza": 0.7,
+        "para_grupos": 0.7, "casual": 0.6
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000011",
+      "category_slug": "restaurante",
+      "name": "Green Point",
+      "description": "Restaurante vegano con menú del día económico en San Blas.",
+      "address": "Calle Carmen Bajo 235, Cusco",
+      "latitude": -13.5158,
+      "longitude": -71.9746,
+      "price_level": 1,
+      "estimated_cost": 25.0,
+      "is_outdoor": false,
+      "best_time_buckets": ["morning", "afternoon"],
+      "companion_fit": ["solo", "couple", "friends"],
+      "image_urls": [],
+      "tag_weights": {
+        "vegetariano": 1.0, "casual": 0.7, "solo_friendly": 0.7, "economico": 0.6,
+        "bohemio": 0.5, "tranquilo": 0.5
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000012",
+      "category_slug": "cafeteria",
+      "name": "Jack's Café",
+      "description": "Cafetería de desayunos abundantes, postres y buen café.",
+      "address": "Calle Choquechaca 509, Cusco",
+      "latitude": -13.5165,
+      "longitude": -71.9757,
+      "price_level": 2,
+      "estimated_cost": 30.0,
+      "is_outdoor": false,
+      "best_time_buckets": ["morning", "afternoon"],
+      "companion_fit": ["solo", "couple", "friends", "family"],
+      "image_urls": [],
+      "tag_weights": {
+        "cafeteria": 1.0, "casual": 0.8, "postres": 0.7, "comida_internacional": 0.6,
+        "solo_friendly": 0.6, "wifi_trabajo": 0.5, "animado": 0.4
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000013",
+      "category_slug": "bar",
+      "name": "Limbus Restobar",
+      "description": "Bar en la ladera de San Blas con terraza y una de las mejores vistas nocturnas.",
+      "address": "Pasñapakana 133, Cusco",
+      "latitude": -13.5148,
+      "longitude": -71.9748,
+      "price_level": 3,
+      "estimated_cost": 60.0,
+      "is_outdoor": false,
+      "best_time_buckets": ["evening", "night"],
+      "companion_fit": ["couple", "friends"],
+      "image_urls": [],
+      "tag_weights": {
+        "vista_panoramica": 1.0, "terraza": 1.0, "bar": 0.9, "bebidas_artesanales": 0.8,
+        "romantico": 0.6, "vida_nocturna": 0.6, "para_parejas": 0.6, "fotografico": 0.5
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000014",
+      "category_slug": "bar",
+      "name": "Ukukus",
+      "description": "Bar con música en vivo todas las noches, de los clásicos de la vida nocturna cusqueña.",
+      "address": "Calle Plateros 316, Cusco",
+      "latitude": -13.5163,
+      "longitude": -71.9791,
+      "price_level": 2,
+      "estimated_cost": 30.0,
+      "is_outdoor": false,
+      "best_time_buckets": ["night"],
+      "companion_fit": ["solo", "friends"],
+      "image_urls": [],
+      "tag_weights": {
+        "musica_en_vivo": 1.0, "vida_nocturna": 1.0, "animado": 1.0, "bar": 0.9,
+        "para_grupos": 0.8, "economico": 0.5, "bohemio": 0.4
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000015",
+      "category_slug": "discoteca",
+      "name": "Mama Africa",
+      "description": "Discoteca frente a la Plaza de Armas, punto de encuentro de viajeros.",
+      "address": "Portal de Harinas 191, Cusco",
+      "latitude": -13.5171,
+      "longitude": -71.9785,
+      "price_level": 2,
+      "estimated_cost": 25.0,
+      "is_outdoor": false,
+      "best_time_buckets": ["night"],
+      "companion_fit": ["friends"],
+      "image_urls": [],
+      "tag_weights": {
+        "discoteca": 1.0, "vida_nocturna": 1.0, "animado": 1.0, "para_grupos": 0.9,
+        "economico": 0.5, "musica_en_vivo": 0.3
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000016",
+      "category_slug": "parque",
+      "name": "Plaza de Armas del Cusco",
+      "description": "Corazón histórico de la ciudad, rodeado por la Catedral y la Compañía de Jesús.",
+      "address": "Plaza de Armas, Cusco",
+      "latitude": -13.5167,
+      "longitude": -71.9788,
+      "price_level": 1,
+      "estimated_cost": 0.0,
+      "is_outdoor": true,
+      "best_time_buckets": ["morning", "afternoon", "evening", "night"],
+      "companion_fit": ["solo", "couple", "friends", "family"],
+      "image_urls": [],
+      "tag_weights": {
+        "arquitectura": 1.0, "economico": 1.0, "historico": 0.9, "fotografico": 0.9,
+        "aire_libre": 0.7, "familiar": 0.7, "accesible": 0.7, "animado": 0.6,
+        "eventos": 0.5, "pet_friendly": 0.4
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000017",
+      "category_slug": "aventura",
+      "name": "Caminata al Templo de la Luna",
+      "description": "Ruta de caminata entre eucaliptos hacia el santuario inca de Amaru Marka Wasi.",
+      "address": "Sector Templo de la Luna, Cusco",
+      "latitude": -13.5011,
+      "longitude": -71.9719,
+      "price_level": 1,
+      "estimated_cost": 0.0,
+      "is_outdoor": true,
+      "best_time_buckets": ["morning", "afternoon"],
+      "companion_fit": ["solo", "couple", "friends"],
+      "image_urls": [],
+      "tag_weights": {
+        "aire_libre": 1.0, "naturaleza": 0.9, "mistico": 0.8, "economico": 0.8,
+        "aventura": 0.7, "deportivo": 0.6, "tranquilo": 0.6, "historico": 0.5
+      },
+      "is_active": true
+    },
+    {
+      "id": "a1000000-0000-4000-8000-000000000018",
+      "category_slug": "museo",
+      "name": "Centro de Textiles Tradicionales del Cusco",
+      "description": "Museo vivo de tejido andino con demostraciones de tejedoras de comunidades.",
+      "address": "Av. El Sol 603, Cusco",
+      "latitude": -13.5208,
+      "longitude": -71.9744,
+      "price_level": 1,
+      "estimated_cost": 0.0,
+      "is_outdoor": false,
+      "best_time_buckets": ["morning", "afternoon", "evening"],
+      "companion_fit": ["solo", "couple", "family"],
+      "image_urls": [],
+      "tag_weights": {
+        "artesania": 1.0, "tradicion_local": 1.0, "cultural": 0.8, "compras": 0.7,
+        "museo": 0.6, "tranquilo": 0.5, "accesible": 0.6
+      },
+      "is_active": true
+    }
+  ]
+}

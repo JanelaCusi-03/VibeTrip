@@ -1,22 +1,51 @@
 name: vibetrip
 description: Recomendador móvil contextual de lugares, gastronomía, actividades y entretenimiento.
 publish_to: "none"
-version: 0.1.0+1
+version: 0.2.0+2
 
 environment:
   sdk: ">=3.4.0 <4.0.0"
 
-# Esqueleto inicial. El Entregable 2 lo reemplaza por el pubspec completo
-# (Riverpod, freezed, dio, geolocator, go_router, mapas, etc.) con la
-# justificación de cada dependencia.
+# Cada dependencia está justificada en docs/entregable-2/ENTREGABLE_2.md (sección 5).
 dependencies:
   flutter:
     sdk: flutter
+
+  # Estado reactivo e inyección de dependencias (patrones Observer y DI).
+  flutter_riverpod: ^3.4.3
+  # Navegación declarativa con rutas tipadas y deep links (/places/:placeId).
+  go_router: ^18.1.1
+
+  # Backend: Auth, PostgREST (CRUD) y Edge Functions sobre PostgreSQL.
+  supabase_flutter: ^2.18.3
+  # Cliente HTTP ligero para Open-Meteo (clima, captura contextual).
+  http: ^1.6.0
+
+  # Captura contextual: ubicación GPS con manejo de permisos.
+  geolocator: ^14.1.2
+  # Mapa interactivo con OpenStreetMap, sin API key de pago (RF-13).
+  flutter_map: ^8.3.2
+  # Tipo LatLng requerido por flutter_map.
+  latlong2: ^0.10.1
+
+  # Caché local Offline-First y cola de eventos de telemetría (RF-15).
+  shared_preferences: ^2.5.6
+  # event_id (UUID v4) como clave de idempotencia de la telemetría.
+  uuid: ^4.6.0
+  # «Cómo llegar» mediante deep link a la app de mapas (RF-14).
+  url_launcher: ^6.3.3
+  # Detecta el % visible de cada tarjeta para medir el dwell time (RF-04).
+  visibility_detector: ^0.4.0+2
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^4.0.0
+  # Mocks y fakes sin generación de código para pruebas unitarias.
+  mocktail: ^1.0.5
 
 flutter:
   uses-material-design: true
+  assets:
+    # Datos semilla del modo local (Entregable 3).
+    - assets/seed/places.json

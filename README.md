@@ -8,7 +8,7 @@
 ![Cobertura](https://img.shields.io/badge/cobertura-%E2%89%A590%25-brightgreen)
 ![Estado](https://img.shields.io/badge/estado-en%20desarrollo-orange)
 
-*(Nombre de trabajo. Reemplaza `TU-USUARIO/TU-REPO` en las insignias y enlaces cuando crees el repositorio.)*
+[![CI](https://github.com/JanelaCusi-03/VibeTrip/actions/workflows/ci.yml/badge.svg)](https://github.com/JanelaCusi-03/VibeTrip/actions/workflows/ci.yml)
 
 ---
 
@@ -395,45 +395,62 @@ La optimización es reactiva y basada en datos:
 | # | Entregable | Estado |
 |---|---|---|
 | 1 | Ingeniería de requisitos, método de captura y modelo de datos | ✅ Completado |
-| 2 | Diseño matemático del motor y arquitectura Flutter | ⏳ Pendiente |
-| 3 | Capa de dominio, datos y modelos en Dart | ⏳ Pendiente |
-| 4 | Motor de recomendación y telemetría | ⏳ Pendiente |
-| 5 | UI/UX, geolocalización y pruebas (QA) | ⏳ Pendiente |
+| 2 | Diseño matemático del motor y arquitectura Flutter | ✅ Completado ([docs](./docs/entregable-2/ENTREGABLE_2.md)) |
+| 3 | Capa de dominio, datos y modelos en Dart | ✅ Completado ([docs](./docs/entregable-3/ENTREGABLE_3.md)) |
+| 4 | Motor de recomendación y telemetría | ✅ Completado ([docs](./docs/entregable-4/ENTREGABLE_4.md)) |
+| 5 | UI/UX, geolocalización y pruebas (QA) | ✅ Completado ([docs](./docs/entregable-5/ENTREGABLE_5.md)) |
 
 ## Estructura del repositorio
 
-Estructura inicial (se ampliará con el Entregable 2):
-
 ```
-vibetrip/
-├── .github/
-│   └── workflows/
-│       └── ci.yml
+VibeTrip/
+├── .github/workflows/ci.yml        # CI: formato, análisis, pruebas, gate de cobertura, APK
+├── android/ · ios/                 # Plataformas (permisos de ubicación e internet)
+├── assets/seed/places.json         # 18 lugares de Cusco (modo local)
 ├── docs/
-│   ├── entregable-1/
-│   └── perf/
-├── supabase/
-│   └── migrations/
+│   ├── entregable-1/ … entregable-5/
+│   ├── metodologia-kanban/         # Guía del tablero Kanban del proyecto
+│   └── perf/                       # Mediciones de rendimiento
 ├── lib/
-├── test/
-├── pubspec.yaml
-└── README.md
+│   ├── core/                       # Dominio compartido (vectores, Haversine), DI, router, tema
+│   └── features/
+│       ├── places/                 # Lugares, caché offline, detalle y mapa
+│       ├── profile/                # Perfil, onboarding y privacidad
+│       ├── recommendation/         # Motor, contexto (GPS, clima) y feed
+│       └── telemetry/              # Eventos, aprendizaje del vector y tracker
+├── supabase/                       # Migraciones, seed.sql y seed_places.sql
+├── test/                           # Unitarias, widget y evaluación (119 pruebas)
+└── tool/                           # check_coverage.dart, generate_seed_sql.dart
 ```
 
 ## Puesta en marcha
 
-> Esta sección se completará al publicarse el código del Entregable 3 en adelante.
+**Requisitos previos:** Flutter estable (probado con 3.47.6 / Dart 3.13) y un celular Android o emulador.
 
 ```bash
-git clone https://github.com/TU-USUARIO/TU-REPO.git
-cd TU-REPO
+git clone https://github.com/JanelaCusi-03/VibeTrip.git
+cd VibeTrip
 flutter pub get
 flutter analyze
 flutter test --coverage
 flutter run
 ```
 
-**Requisitos previos:** Flutter estable (Dart 3.x), un proyecto de Supabase con las extensiones `vector` y `postgis` habilitadas.
+Sin configuración extra la app funciona en **modo local** con los lugares de `assets/seed/places.json`. Si el GPS está lejos de Cusco, usa el ícono de ubicación de la barra superior para cambiar a la zona manual «Centro de Cusco».
+
+Para usar Supabase (requiere las extensiones `vector` y `postgis`):
+
+```bash
+supabase db reset                              # migraciones + seed.sql
+psql "$DATABASE_URL" -f supabase/seed_places.sql
+flutter run --dart-define=SUPABASE_URL=https://<proyecto>.supabase.co             --dart-define=SUPABASE_PUBLISHABLE_KEY=<clave>
+```
+
+Métricas para la sustentación (Precision@K y latencia):
+
+```bash
+flutter test test/evaluation --reporter expanded
+```
 
 ## Alineación con la rúbrica
 
