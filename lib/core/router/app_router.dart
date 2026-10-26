@@ -1,12 +1,11 @@
-import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 
-/// Rutas de la aplicación. El Entregable 5 agrega onboarding, feed,
-/// detalle y mapa sobre esta misma configuración.
-abstract final class AppRoutes {
-  static const String home = '/';
-}
+import '../../features/places/presentation/map_screen.dart';
+import '../../features/places/presentation/place_detail_screen.dart';
+import '../../features/profile/presentation/home_gate.dart';
+import '../../features/profile/presentation/profile_screen.dart';
+import 'app_routes.dart';
 
 final Provider<GoRouter> appRouterProvider = Provider<GoRouter>((ref) {
   final GoRouter router = GoRouter(
@@ -14,21 +13,23 @@ final Provider<GoRouter> appRouterProvider = Provider<GoRouter>((ref) {
     routes: <RouteBase>[
       GoRoute(
         path: AppRoutes.home,
-        builder: (context, state) => const _HomePlaceholderScreen(),
+        builder: (context, state) => const HomeGate(),
+      ),
+      GoRoute(
+        path: AppRoutes.placeDetailPattern,
+        builder: (context, state) =>
+            PlaceDetailScreen(placeId: state.pathParameters['placeId']!),
+      ),
+      GoRoute(
+        path: AppRoutes.map,
+        builder: (context, state) => const MapScreen(),
+      ),
+      GoRoute(
+        path: AppRoutes.profile,
+        builder: (context, state) => const ProfileScreen(),
       ),
     ],
   );
   ref.onDispose(router.dispose);
   return router;
 });
-
-class _HomePlaceholderScreen extends StatelessWidget {
-  const _HomePlaceholderScreen();
-
-  @override
-  Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(child: Text('VibeTrip')),
-    );
-  }
-}
