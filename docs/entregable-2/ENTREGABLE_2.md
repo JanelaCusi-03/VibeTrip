@@ -317,7 +317,7 @@ lib/
 ├── main.dart                          # Arranque: SharedPreferences, Supabase opcional, ProviderScope
 ├── app.dart                           # MaterialApp.router + tema
 ├── core/
-│   ├── config/app_config.dart         # SUPABASE_URL y SUPABASE_ANON_KEY vía --dart-define
+│   ├── config/app_config.dart         # SUPABASE_URL y SUPABASE_PUBLISHABLE_KEY vía --dart-define
 │   ├── domain/                        # Dart puro compartido
 │   │   ├── tag_catalog.dart           # 48 etiquetas, 6 grupos (espejo de la tabla tags)
 │   │   ├── tag_vector.dart            # Vector inmutable de 48 dimensiones
