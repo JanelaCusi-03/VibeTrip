@@ -127,10 +127,10 @@ Aunque la discoteca está más cerca, el mirador gana por afinidad y contexto, q
 Contribución de cada etiqueta al producto punto: `cᵢ = uᵢ · pᵢ`. Se toman las **dos** etiquetas con mayor `cᵢ ≥ 0.05` y se agrega el motivo contextual más fuerte:
 
 ```
-"Recomendado porque te gusta lo tranquilo y aire libre · a 1.2 km · ideal para esta hora"
+"Recomendado porque te gusta: Tranquilo y Aire libre · a 1.2 km · ideal para esta hora"
 ```
 
-Si ninguna etiqueta supera el umbral, la explicación se basa solo en el contexto ("Cerca de ti y dentro de tu presupuesto").
+Motivo contextual: la distancia (si se conoce) y luego «ideal para esta hora» si la franja coincide o, si no, «dentro de tu presupuesto». Si ninguna etiqueta supera el umbral, la explicación se basa solo en el contexto ("Recomendado por tu contexto · a 300 m · dentro de tu presupuesto").
 
 ### 3.6 Exclusiones
 
