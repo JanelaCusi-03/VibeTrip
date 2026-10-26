@@ -396,7 +396,7 @@ La optimización es reactiva y basada en datos:
 |---|---|---|
 | 1 | Ingeniería de requisitos, método de captura y modelo de datos | ✅ Completado |
 | 2 | Diseño matemático del motor y arquitectura Flutter | ✅ Completado ([docs](./docs/entregable-2/ENTREGABLE_2.md)) |
-| 3 | Capa de dominio, datos y modelos en Dart | ⏳ Pendiente |
+| 3 | Capa de dominio, datos y modelos en Dart | ✅ Completado ([docs](./docs/entregable-3/ENTREGABLE_3.md)) |
 | 4 | Motor de recomendación y telemetría | ⏳ Pendiente |
 | 5 | UI/UX, geolocalización y pruebas (QA) | ⏳ Pendiente |
 
