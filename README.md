@@ -8,7 +8,7 @@
 ![Cobertura](https://img.shields.io/badge/cobertura-%E2%89%A590%25-brightgreen)
 ![Estado](https://img.shields.io/badge/estado-en%20desarrollo-orange)
 
-*(Nombre de trabajo. Reemplaza `TU-USUARIO/TU-REPO` en las insignias y enlaces cuando crees el repositorio.)*
+[![CI](https://github.com/JanelaCusi-03/VibeTrip/actions/workflows/ci.yml/badge.svg)](https://github.com/JanelaCusi-03/VibeTrip/actions/workflows/ci.yml)
 
 ---
 
@@ -395,7 +395,7 @@ La optimización es reactiva y basada en datos:
 | # | Entregable | Estado |
 |---|---|---|
 | 1 | Ingeniería de requisitos, método de captura y modelo de datos | ✅ Completado |
-| 2 | Diseño matemático del motor y arquitectura Flutter | ⏳ Pendiente |
+| 2 | Diseño matemático del motor y arquitectura Flutter | ✅ Completado ([docs](./docs/entregable-2/ENTREGABLE_2.md)) |
 | 3 | Capa de dominio, datos y modelos en Dart | ⏳ Pendiente |
 | 4 | Motor de recomendación y telemetría | ⏳ Pendiente |
 | 5 | UI/UX, geolocalización y pruebas (QA) | ⏳ Pendiente |
@@ -425,8 +425,8 @@ vibetrip/
 > Esta sección se completará al publicarse el código del Entregable 3 en adelante.
 
 ```bash
-git clone https://github.com/TU-USUARIO/TU-REPO.git
-cd TU-REPO
+git clone https://github.com/JanelaCusi-03/VibeTrip.git
+cd VibeTrip
 flutter pub get
 flutter analyze
 flutter test --coverage
