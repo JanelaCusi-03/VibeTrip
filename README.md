@@ -379,10 +379,10 @@ La optimización es reactiva y basada en datos:
 
 | Rol | Responsabilidad | Integrante |
 |---|---|---|
-| Product Owner | Prioriza el backlog y valida criterios de aceptación | *(nombre)* |
-| Coach / Scrum Master | Facilita ceremonias y vela por el DoD | *(nombre)* |
-| Mobile Lead | UI, estado y arquitectura Flutter | *(nombre)* |
-| Data/Backend Engineer | Esquema SQL, API y motor de recomendación | *(nombre)* |
+| Product Owner | Prioriza el backlog y valida criterios de aceptación | Angel Ismael Alvarez Catunta (221945) |
+| Coach / Scrum Master | Facilita ceremonias y vela por el DoD | Ibeth Janela del Pilar Cusi Diaz (210924) |
+| Mobile Lead | UI, estado y arquitectura Flutter | Angel Ismael Alvarez Catunta (221945) |
+| Data/Backend Engineer | Esquema SQL, API y motor de recomendación | Ibeth Janela del Pilar Cusi Diaz (210924) |
 
 **Sprints de 2 semanas:** S1 modelo de datos y CI · S2 dominio y datos · S3 motor y telemetría · S4 UI y mapa · S5 QA, optimización y sustentación.
 
